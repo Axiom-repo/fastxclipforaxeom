@@ -8,7 +8,7 @@ int main() {
 	scanf("%10s", &filetype);
 	const char filename[60];
 	printf("введите имя изображения:");
-	scanf("%60s", &filename);
+	scanf(" %[^\n]60s\n", &filename);
 	char str[70];
 	sprintf(str, "xclip -selection clipboard -t image/%s -i %60s.%s", &filetype, &filename, &filetype);
 	system(str);
